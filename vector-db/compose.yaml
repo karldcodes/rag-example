@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: docker.io/pgvector/pgvector:pg18-trixie
+    container_name: rag-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: rag_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      rag_network:
+        aliases:
+          - postgres
+
+  pgadmin:
+    image: docker.io/dpage/pgadmin4
+    container_name: rag-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+      - ./servers.json:/pgadmin4/servers.json:ro
+    networks:
+      - rag_network
+
+networks:
+  rag_network:
+    name: rag_network
+    driver: bridge
+    
+volumes:
+  postgres_data:
+  pgadmin_data:

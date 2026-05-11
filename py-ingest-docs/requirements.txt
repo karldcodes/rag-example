@@ -1,0 +1,10 @@
+numpy
+pandas
+openai
+psycopg[binary] 
+python-dotenv
+langchain
+nltk
+langchain-text-splitters
+tiktoken
+langchain-openai

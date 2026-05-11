@@ -1,0 +1,5 @@
+Fruity Parametric EQ 2 is an advanced 7-Band parametric equalizer plugin with Standard (Infinite Impulse Response [IIR]) and an advanced Linear Phase (Fast Fourier Transform [FFT]) mode that allows fast parameter changes not normally possible with conventional FFT filters.
+
+Equalizing is the process of increasing or decreasing the loudness of specific frequencies. The Band type (shape), center frequency and width of each Band are fully adjustable. You can choose from: High Shelf, Low Shelf, Peaking, Band Pass, Notch, Low Pass, High Pass or Band Pass filters for each Band independently. There is also a global gain slider to adjust the overall level.
+
+When to use: Parametric EQ 2 is a good choice whenever precise control over EQ is required (e.g. Mastering and controlling or enhancing specific frequencies at an instrument level). Alternatively, if screen space is tight use Fruity Parametric EQ, or for a graphic EQ, try EQUO. NOTE: If you require even more precise control over EQ you can click and drag on the plugin window to resize Parametric EQ2 or use the off-line Equalize Tool in Edison provides the greatest precision of all the EQ plugins.
