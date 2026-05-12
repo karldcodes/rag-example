@@ -8,3 +8,4 @@ nltk
 langchain-text-splitters
 tiktoken
 langchain-openai
+python-dotenv
